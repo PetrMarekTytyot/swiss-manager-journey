@@ -32,3 +32,14 @@ adresa 0x006C
 | **25**     | ???             |            |                  |      |      |      |      |      |      |
 | **26**     | ???             |            | Federation2__    |      |      |      |      |      |      |
 
+**Sekce 2** - začíná prefixem 95 FF 89 44
+velkost asi pevná 16FB (5 883 DEC)
+obsahuje data o turnaji,
+
+**Sekce 3** - začíná prefixem A3 FF 89 44
+udaje o terminech
+první 2byte velikost field - čas např. 04 00 39 00 3A 00 35 00 -> 9:15
+další fields asi pevné umístění velikost 1A4B - 1AB5 6A (106 DEC)
+počáteční byte = 0
+byte 1E 1F 20 (30, 31, 32 DEC) datum termínu, kola např. 15.12.2024 3F DB 34, 15.12.2024 3E DB 34, 17.12.2024 40 DB 34 
+
