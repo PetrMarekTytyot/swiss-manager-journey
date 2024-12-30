@@ -65,15 +65,15 @@ jednotlivý hráči, jednotlivé záznamy hráčů (v pořadí jak byly zadány,
 | **15**     | ???             |            |                  |      |      |      |      |      |      |
 | **16**     | ???             |            |                  |      |      |      |      |      |      |
 | **17**     | ???             |            |                  |      |      |      |      |      |      |
-| **18**     | Zdroj           |            | Source           |      |      |      |      |      |      |
-| **následuje pevný počet byte 134 bytes**                                                       |||||||||
-| **19**     | ???             |            |                  |      |      |      |      |      |      |
-| **20**     | ???             |            |                  |      |      |      |      |      |      |
-| **21**     | Federace        |            | Federation       |      |      |      |      |      |      |
-| **22**     | HLavní rozhodčí |            | ChiefReferee     |      |      |      |      |      |      |
-| **23**     | ???             |            |                  |      |      |      |      |      |      |
-| **24**     | ???             |            |                  |      |      |      |      |      |      |
-| **25**     | ???             |            |                  |      |      |      |      |      |      |
-| **26**     | ???             |            | Federation2__    |      |      |      |      |      |      |
-
-
+| **18**     | Zdroj           |            | Source           |      |      |      |      |      |      | 
+**následuje pevný počet byte 134 bytes**
+|            |                 | 1-30       |                  |      |      |      |      |      |      |
+|            | Poh             | 31         | Sex              | sex 0-male, 1-female, 2 computer, v exportu hráčů pokud je zadáno C je stejně m |      |      |      |      |      |
+|            |                 | 32         |                  |      |      |      |      |      |      |
+|            | Rtg.FIDE        | 33 34      | Rating           | FIDE rating |      |      |      |      |      |
+|            | Rtg.nár         | 35 36      | NatRating        | národní rating |      |      |      |      |      |
+|            |                 | 37 38      |                  |      |      |      |      |      |      |
+|            | Nar.            | 39 40 41   | BirthDate/BirthYear | datum narození, většinou jen rok     |      |      |      |      |      |
+|            |                 | 42 - 48    |                  |      |      |      |      |      |      |
+|            | FIDE ID         | 49 50 51 52 | FIDEId        | FIDE Id |      |      |      |      |    
+|            |                 | 53- 134 |                  |      |      |      |      |      |      |
