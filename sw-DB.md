@@ -43,3 +43,37 @@ další fields asi pevné umístění velikost 1A4B - 1AB5 6A (106 DEC)\
 počáteční byte = 0\
 byte 1E 1F 20 (30, 31, 32 DEC) datum termínu, kola např. 15.12.2024 3F DB 34, 15.12.2024 3E DB 34, 17.12.2024 40 DB 34\
 
+**Sekce 4** - začíná prefixem A5 FF 89 44\
+jednotlivý hráči, jednotlivé záznamy hráčů (v pořadí jak byly zadány, asi...), nejprvé proměnlivé proměnné (strings), následuje pevná část
+
+| **Pořadí** | **Jméno (GUI)** | **adresa** | **Jméno (json)** | **decr** | **** | **** | **** | **** | **** |
+|------------|-----------------|------------|------------------|------|------|------|------|------|------|
+| **1**      | Příjmení        |            | LastName         |      |      |      |      |      |      |
+| **2**      | Jméno           |            | FirstName        |      |      |      |      |      |      |
+| **3**      | Student         |            | AcdemicTitle     |      |      |      |      |      |      |
+| **4**      | Zkr.jméno       |            | Abbr             |      |      |      |      |      |      |
+| **5**      | Titul           |            | Title            |      |      |      |      |      |      |
+| **6**      | ID č.           |            | NatId            |      |      |      |      |      |      |
+| **7**      | ???             |            |                  |      |      |      |      |      |
+| **8**      | ???             |            |                  |      |      |      |      |      |      |
+| **9**      | ???             |            |                  |      |      |      |      |      |      |
+| **10**     | Klub            |            | ClubName         |      |      |      |      |      |      |
+| **11**     | Fed             |            | Federation       |      |      |      |      |      |      |
+| **12**     | Typ             |            | Type             |      |      |      |      |      |      |
+| **13**     | Skup            |            | Group            |      |      |      |      |      |      |
+| **14**     | ???             |            |                  |      |      |      |      |      |      |
+| **15**     | ???             |            |                  |      |      |      |      |      |      |
+| **16**     | ???             |            |                  |      |      |      |      |      |      |
+| **17**     | ???             |            |                  |      |      |      |      |      |      |
+| **18**     | Zdroj           |            | Source           |      |      |      |      |      |      |
+| **následuje pevný počet byte 134 bytes**                                                       |||||||||
+| **19**     | ???             |            |                  |      |      |      |      |      |      |
+| **20**     | ???             |            |                  |      |      |      |      |      |      |
+| **21**     | Federace        |            | Federation       |      |      |      |      |      |      |
+| **22**     | HLavní rozhodčí |            | ChiefReferee     |      |      |      |      |      |      |
+| **23**     | ???             |            |                  |      |      |      |      |      |      |
+| **24**     | ???             |            |                  |      |      |      |      |      |      |
+| **25**     | ???             |            |                  |      |      |      |      |      |      |
+| **26**     | ???             |            | Federation2__    |      |      |      |      |      |      |
+
+
