@@ -62,8 +62,8 @@ jednotlivý hráči, jednotlivé záznamy hráčů (v pořadí jak byly zadány,
 | **12**     | Typ             |            | Type             |      |      |      |      |      |      |
 | **13**     | Skup            |            | Group            |      |      |      |      |      |      |
 | **14**     | ???             |            |                  |      |      |      |      |      |      |
-| **15**     | ???             |            |                  |      |      |      |      |      |      |
-| **16**     | ???             |            |                  |      |      |      |      |      |      |
+| **15**     | Email           |            | Email            |      |      |      |      |      |      |
+| **16**     | OnlineUser      |            | OnlineUser       |      |      |      |      |      |      |
 | **17**     | ???             |            |                  |      |      |      |      |      |      |
 | **18**     | Zdroj           |            | Source           |      |      |      |      |      |      | 
 **následuje pevný počet byte 134 bytes**
@@ -74,6 +74,10 @@ jednotlivý hráči, jednotlivé záznamy hráčů (v pořadí jak byly zadány,
 |            | Rtg.nár         | 35 36      | NatRating        | národní rating |      |      |      |      |      |
 |            |                 | 37 38      |                  |      |      |      |      |      |      |
 |            | Nar.            | 39 40 41   | BirthDate/BirthYear | datum narození, většinou jen rok     |      |      |      |      |      |
-|            |                 | 42 - 48    |                  |      |      |      |      |      |      |
+|            |                 | 42         |                  |      |      |      |      |      |      |
+|            | Č.kl.           | 43 44      | ClubNo           | číslo oddílu |      |      |      |      |      |
+|            |                 | 45 - 48    |                  |      |      |      |      |      |      |
+|            | rankcorr        | 57 58      | RankCorr         | to nevím co znamená, asi max 1000 |      |      |      |      |      |
+|            | Stav            | 74 75      | ???              | to nevím co znamená, obsahuje hodnotu 2x co je v GUI |      |      |      |      |      |
 |            | FIDE ID         | 49 50 51 52 | FIDEId        | FIDE Id |      |      |      |      |    
 |            |                 | 53- 134 |                  |      |      |      |      |      |      |
