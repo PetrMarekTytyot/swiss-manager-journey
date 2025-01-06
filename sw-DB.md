@@ -61,6 +61,8 @@ obsahuje data o turnaji,
 |            |  |     |   |      |      |      |      |      |      |
 |            | | 878 bit |   | zvyšuje se při každém uložení (2 nebo 4 bytes)|      |      |      |      |      |
 |            |  |     |   |      |      |      |      |      |      |
+|            | Time Control | 1264 |   | 1 - Standard, 2 - Rapid, 3 - Blitz |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
 |            | FIDE Event-ID | 1272-75 |   | přistupné pouze pokud klasifikace podle FIDE |      |      |      |      |      |
 
 **Sekce 3** - začíná prefixem A3 FF 89 44\
