@@ -1,5 +1,11 @@
 první sekce od nultého byte začíná znaky 93 FF 89 44 (prefix) informace o turnaji\
 pevná velikost 0x68 (104) bytes\
+| **Pořadí** | **Jméno (GUI)** | **adresa** | **Jméno (json)** | **decr** | **** | **** | **** | **** | **** |
+|------------|-----------------|------------|------------------|------|------|------|------|------|------|
+|            | databázový klíč | 29 - 32    |   |      |      |      |      |      |      |
+|            |            |     |   |      |      |      |      |      |      |
+|            |            |     |   |      |      |      |      |      |      |
+
 následují string variabilné dékou jednotlivý fields vžda první 2 bytes určují velikost field, následuje honodat field\
 adresa 0x006C 
 
@@ -11,7 +17,7 @@ adresa 0x006C
 | **4**      | Ředitel turnaje |            |                  |      |      |      |      |      |      |
 | **5**      | Organizátor     |            |                  |      |      |      |      |      |      |
 | **6**      | Místo konání    |            |                  |      |      |      |      |      |      |
-| **7**      | ???             |            |                  |      |      |      |      |      |      |
+| **7**      | Rozhodčí        |            |                  |      |      |      |      |      |      |
 | **8**      | ???             |            |                  |      |      |      |      |      |      |
 | **9**      | ???             |            |                  |      |      |      |      |      |      |
 | **10**     | ???             |            |                  |      |      |      |      |      |      |
@@ -20,7 +26,7 @@ adresa 0x006C
 | **13**     | ???             |            |                  |      |      |      |      |      |      |
 | **14**     | věková skupina  |            |                  | Categories     |      |      |      |      |      |
 | **15**     | časová kontrola |            | Tempo            |      |      |      |      |      |      |
-| **16**     | ???             |            |                  |      |      |      |      |      |      |
+| **16**     | Turnaj/Ostatní/HTML-název souboru |            |                  |      |      |      |      |      |      |
 | **17**     | ???             |            |                  |      |      |      |      |      |      |
 | **18**     | ???             |            |                  |      |      |      |      |      |      |
 | **19**     | ???             |            |                  |      |      |      |      |      |      |
@@ -31,10 +37,31 @@ adresa 0x006C
 | **24**     | ???             |            |                  |      |      |      |      |      |      |
 | **25**     | ???             |            |                  |      |      |      |      |      |      |
 | **26**     | ???             |            | Federation2__    |      |      |      |      |      |      |
+| **28**     | Zástupce hlavního rozhodčího |            | |      |      |      |      |      |      |
 
 **Sekce 2** - začíná prefixem 95 FF 89 44\
 velkost asi pevná 16FB (5 883 DEC)\
 obsahuje data o turnaji,
+| **Pořadí** | **Jméno (GUI)** | **adresa** | **Jméno (json)** | **decr** | **** | **** | **** | **** | **** |
+|------------|-----------------|------------|------------------|------|------|------|------|------|------|
+|            |  |     |   |      |      |      |      |      |      |
+|            | Klasifikace podle ratingu FIDE | 22 |  |  | bit 1 1 - ANO, 0 - NE | pokud ANO je přítupné pole FIDE Event-ID |      |      |      |
+|            | Klasifikace podle ratingu national | 22 |  |  | bit 0 1 - ANO, 0 - NE |  |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | Třídění seznamu nasazení | 107 |  | 0 - automaticky, 1 bez automatického třídění |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | Povolit zadáni specielních výsledků (0:0, ½:0.... | 831 bit    |   |      |      |      |      |      |      |
+|            | Zadání výsledků vyloučených hráčů/družstev (implicitně 0) | 832 bit    |   |      |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | Hráči mohou být vždy nasazeny ručně | 837 bit |   |      |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | S pomocným hodnocením družstev | 840 bit    |   |      |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | Sečti body v poli PtsAdd v dialogu hráče pro potřeby losování a pořadí (disabled when JaVaFo engine is used))| 864 bit    |   |      |      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | | 878 bit |   | zvyšuje se při každém uložení (2 nebo 4 bytes)|      |      |      |      |      |
+|            |  |     |   |      |      |      |      |      |      |
+|            | FIDE Event-ID | 1272-75 |   | přistupné pouze pokud klasifikace podle FIDE |      |      |      |      |      |
 
 **Sekce 3** - začíná prefixem A3 FF 89 44\
 udaje o terminech\
