@@ -1,4 +1,4 @@
-první sekce od nultého byte začíná znaky 93 FF 89 44 (prefix) informace o turnaji\
+**Sekce 1** vždy od nultého byte začíná znaky 93 FF 89 44 (prefix) informace o turnaji\
 pevná velikost 0x68 (104) bytes\
 | **Pořadí** | **Jméno (GUI)** | **adresa** | **Jméno (json)** | **decr** | **** | **** | **** | **** | **** |
 |------------|-----------------|------------|------------------|------|------|------|------|------|------|
@@ -110,3 +110,13 @@ jednotlivý hráči, jednotlivé záznamy hráčů (v pořadí jak byly zadány,
 |            | Stav            | 74 75      | ???              | to nevím co znamená, obsahuje hodnotu 2x co je v GUI |      |      |      |      |      |
 |            | FIDE ID         | 49 50 51 52 | FIDEId        | FIDE Id |      |      |      |      |    
 |            |                 | 53- 134 |                  |      |      |      |      |      |      |
+
+**Sekce 5** - začíná prefixem B3 FF 89 44\
+nevím co znamená, převážně byte 0
+
+**Sekce 6** - začíná prefixem B5 FF 89 44\
+pouze pro DB družstev - záznamy družstev
+
+soubor končí bytes E3 FF 89 44\
+
+
